@@ -1,0 +1,37 @@
+{
+	"name": "@plmservices/nativescript-sha",
+	"version": "2.0.0",
+	"description": "Nativescript SHA (HMAC-SHA) plugin.",
+	"main": "index",
+	"typings": "index.d.ts",
+	"nativescript": {
+		"platforms": {
+			"ios": "6.0.0",
+			"android": "6.0.0"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mcgouganp/nativescript-sha.git"
+	},
+	"keywords": [
+		"NativeScript",
+		"JavaScript",
+		"TypeScript",
+		"iOS",
+		"Android",
+		"SHA",
+		"HMAC"
+	],
+	"author": {
+		"name": "Paul McGougan",
+		"email": "paul@plmservices.com.au"
+	},
+	"bugs": {
+		"url": "https://github.com/mcgouganp/nativescript-sha/issues"
+	},
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/mcgouganp/nativescript-sha",
+	"readmeFilename": "README.md",
+	"bootstrapper": "@nativescript/plugin-seed"
+}
