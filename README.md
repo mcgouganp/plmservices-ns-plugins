@@ -5,6 +5,7 @@ npm run setup
 npm start
 ```
 
+- @plmservices/nativescript-easylink
 - @plmservices/nativescript-sha
 
 # How to use?

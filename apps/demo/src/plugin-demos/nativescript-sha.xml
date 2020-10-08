@@ -32,7 +32,7 @@
                 <Label row="11" col="0" text="HMAC SHA-512:" />
                 <Label row="11" col="1" text="{{ hmac512 }}" class="message m-5" textWrap="true" />
             </GridLayout>
-            <Button text="Process" tap="{{ process }}" width="20%" class="-primary -rounded-lg m-t-10" />
+            <Button text="Process" tap="{{ process }}" width="60%" class="-primary -rounded-lg m-t-10" />
           </StackLayout>
         </ScrollView>
     </StackLayout>

@@ -7,10 +7,18 @@
 			"projectType": "application",
 			"prefix": "demo",
 			"architect": {
-				"ios": {
+				"ios-sim": {
 					"builder": "@nrwl/workspace:run-commands",
 					"options": {
 						"commands": ["ns debug ios --no-hmr --emulator --env.testing"],
+						"cwd": "apps/demo",
+						"parallel": false
+					}
+				},
+				"ios-dev": {
+					"builder": "@nrwl/workspace:run-commands",
+					"options": {
+						"commands": ["ns debug ios --no-hmr --env.testing"],
 						"cwd": "apps/demo",
 						"parallel": false
 					}
@@ -73,7 +81,7 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx run nativescript-sha:build.all"],
+						"commands": ["nx run nativescript-sha:build.all", "nx run nativescript-easylink:build.all"],
 						"parallel": false
 					}
 				},
@@ -125,6 +133,49 @@
 					"outputs": ["dist/packages"],
 					"options": {
 						"commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-sha"],
+						"parallel": false
+					}
+				}
+			}
+		},
+		"nativescript-easylink": {
+			"root": "packages/nativescript-easylink",
+			"sourceRoot": "packages/nativescript-easylink",
+			"projectType": "library",
+			"schematics": {},
+			"architect": {
+				"build": {
+					"builder": "@nrwl/node:package",
+					"options": {
+						"outputPath": "dist/packages/nativescript-easylink",
+						"tsConfig": "packages/nativescript-easylink/tsconfig.json",
+						"packageJson": "packages/nativescript-easylink/package.json",
+						"main": "packages/nativescript-easylink/index.ts",
+						"assets": [
+							"packages/nativescript-easylink/*.md",
+							"packages/nativescript-easylink/index.d.ts",
+							"LICENSE",
+							{
+								"glob": "**/*",
+								"input": "packages/nativescript-easylink/platforms/",
+								"output": "./platforms/"
+							}
+						]
+					}
+				},
+				"build.all": {
+					"builder": "@nrwl/workspace:run-commands",
+					"outputs": ["dist/packages"],
+					"options": {
+						"commands": ["nx run nativescript-easylink:build", "node tools/scripts/build-finish.ts nativescript-easylink"],
+						"parallel": false
+					}
+				},
+				"focus": {
+					"builder": "@nrwl/workspace:run-commands",
+					"outputs": ["dist/packages"],
+					"options": {
+						"commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-easylink"],
 						"parallel": false
 					}
 				}

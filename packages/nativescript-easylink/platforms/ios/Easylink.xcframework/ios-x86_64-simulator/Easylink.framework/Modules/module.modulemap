@@ -1,0 +1,6 @@
+framework module Easylink {
+  umbrella header "Easylink.h"
+
+  export *
+  module * { export * }
+}

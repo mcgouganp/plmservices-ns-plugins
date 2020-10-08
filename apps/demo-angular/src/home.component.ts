@@ -6,8 +6,11 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 	demos = [
-		{
-			name: 'nativescript-sha',
-		},
-	];
+	{
+		name: 'nativescript-easylink'
+	},
+	{
+		name: 'nativescript-sha'
+	}
+];
 }

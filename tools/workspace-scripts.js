@@ -28,9 +28,13 @@ module.exports = {
 					script: 'nx run demo:clean',
 					description: '⚆  Clean  🧹',
 				},
-				ios: {
-					script: 'nx run demo:ios',
-					description: '⚆  Run iOS  ',
+				'ios-sim': {
+					script: 'nx run demo:ios-sim',
+					description: '⚆  Run iOS on Simulator  ',
+				},
+				'ios-dev': {
+					script: 'nx run demo:ios-dev',
+					description: '⚆  Run iOS on Device  ',
 				},
 				android: {
 					script: 'nx run demo:android',
@@ -70,6 +74,13 @@ module.exports = {
 					description: '@plmservices/nativescript-sha: Build',
 				},
 			},
+			// @plmservices/nativescript-easylink
+			'nativescript-easylink': {
+				build: {
+					script: 'nx run nativescript-easylink:build.all',
+					description: '@plmservices/nativescript-easylink: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -83,6 +94,10 @@ module.exports = {
 			'nativescript-sha': {
 				script: 'nx run nativescript-sha:focus',
 				description: 'Focus on @plmservices/nativescript-sha',
+			},
+			'nativescript-easylink': {
+				script: 'nx run nativescript-easylink:focus',
+				description: 'Focus on @plmservices/nativescript-easylink',
 			},
 			reset: {
 				script: 'nx run all:focus',

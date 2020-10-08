@@ -12,6 +12,7 @@
 		3DEB95281BF3280A0005C635 /* ELAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB95251BF3280A0005C635 /* ELAsyncSocket.m */; };
 		3DEB95291BF3280A0005C635 /* ELAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB95271BF3280A0005C635 /* ELAsyncUdpSocket.m */; };
 		3DEB952C1BF32B070005C635 /* ELReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB952B1BF32B070005C635 /* ELReachability.m */; };
+		8356E5AD508AEF008CE0D7BD /* libPods-EasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE13BA7CAE2B3474661AE4B /* libPods-EasyLink.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,8 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		15064AAF0B70BAE1E7F5D482 /* Pods-EasyLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyLink/Pods-EasyLink.release.xcconfig"; sourceTree = "<group>"; };
-		33A920A1B1B68EBA62C89DAB /* Pods-EasyLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyLink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyLink/Pods-EasyLink.debug.xcconfig"; sourceTree = "<group>"; };
+		16026BA992F1372FD6DC3392 /* Pods-EasyLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyLink.debug.xcconfig"; path = "Target Support Files/Pods-EasyLink/Pods-EasyLink.debug.xcconfig"; sourceTree = "<group>"; };
+		1CE13BA7CAE2B3474661AE4B /* libPods-EasyLink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyLink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE0C2EC1A493D0900B7133F /* libEasyLink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEasyLink.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE0C2EF1A493D0900B7133F /* EasyLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyLink.h; sourceTree = "<group>"; };
 		3DE0C2F11A493D0900B7133F /* EasyLink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyLink.m; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		3DEB95271BF3280A0005C635 /* ELAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELAsyncUdpSocket.m; sourceTree = "<group>"; };
 		3DEB952A1BF32B070005C635 /* ELReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELReachability.h; sourceTree = "<group>"; };
 		3DEB952B1BF32B070005C635 /* ELReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELReachability.m; sourceTree = "<group>"; };
+		98E49D444AE250F36554C7D8 /* Pods-EasyLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyLink.release.xcconfig"; path = "Target Support Files/Pods-EasyLink/Pods-EasyLink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8356E5AD508AEF008CE0D7BD /* libPods-EasyLink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +63,8 @@
 				3DE0C2EE1A493D0900B7133F /* EasyLink */,
 				3DE0C2FB1A493D0A00B7133F /* EasyLinkTests */,
 				3DE0C2ED1A493D0900B7133F /* Products */,
-				A40CA35BC7470DC577352200 /* Pods */,
-				D39182D2E7170D0C1ABF0247 /* Frameworks */,
+				F66F5BE84CE85951E0349F60 /* Pods */,
+				B92FC16857CC8C496AC6F95A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,20 +131,21 @@
 			path = ELReachability;
 			sourceTree = "<group>";
 		};
-		A40CA35BC7470DC577352200 /* Pods */ = {
+		B92FC16857CC8C496AC6F95A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				33A920A1B1B68EBA62C89DAB /* Pods-EasyLink.debug.xcconfig */,
-				15064AAF0B70BAE1E7F5D482 /* Pods-EasyLink.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D39182D2E7170D0C1ABF0247 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
+				1CE13BA7CAE2B3474661AE4B /* libPods-EasyLink.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F66F5BE84CE85951E0349F60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16026BA992F1372FD6DC3392 /* Pods-EasyLink.debug.xcconfig */,
+				98E49D444AE250F36554C7D8 /* Pods-EasyLink.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,11 +155,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DE0C3001A493D0A00B7133F /* Build configuration list for PBXNativeTarget "EasyLink" */;
 			buildPhases = (
-				6E1920E51CA9A1F18D0D8FB5 /* Check Pods Manifest.lock */,
+				5AB69ABB1BE610224F6C3C49 /* [CP] Check Pods Manifest.lock */,
 				3DE0C2E81A493D0900B7133F /* Sources */,
 				3DE0C2E91A493D0900B7133F /* Frameworks */,
 				3DE0C2EA1A493D0900B7133F /* CopyFiles */,
-				7760DDC89865EF8BF0BADDCD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,7 +175,7 @@
 		3DE0C2E41A493D0900B7133F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "MXCHIP Inc";
 				TargetAttributes = {
 					3DE0C2EB1A493D0900B7133F = {
@@ -185,6 +188,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 3DE0C2E31A493D0900B7133F;
@@ -198,34 +202,26 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6E1920E51CA9A1F18D0D8FB5 /* Check Pods Manifest.lock */ = {
+		5AB69ABB1BE610224F6C3C49 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyLink-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7760DDC89865EF8BF0BADDCD /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyLink/Pods-EasyLink-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -249,6 +245,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -257,14 +254,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -288,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-fembed-bitcode";
@@ -300,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -308,14 +309,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -332,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
@@ -342,7 +346,7 @@
 		};
 		3DE0C3011A493D0A00B7133F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33A920A1B1B68EBA62C89DAB /* Pods-EasyLink.debug.xcconfig */;
+			baseConfigurationReference = 16026BA992F1372FD6DC3392 /* Pods-EasyLink.debug.xcconfig */;
 			buildSettings = {
 				MTL_ENABLE_DEBUG_INFO = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
@@ -355,7 +359,7 @@
 		};
 		3DE0C3021A493D0A00B7133F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15064AAF0B70BAE1E7F5D482 /* Pods-EasyLink.release.xcconfig */;
+			baseConfigurationReference = 98E49D444AE250F36554C7D8 /* Pods-EasyLink.release.xcconfig */;
 			buildSettings = {
 				MTL_ENABLE_DEBUG_INFO = "$(inherited)";
 				PODS_ROOT = "$(inherited)";

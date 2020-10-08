@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar title="nativescript-easylink" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout class="p-20">
+        <ScrollView class="h-full">
+          <StackLayout>
+            <GridLayout rows="auto, auto" columns="auto, *">
+              <Label row="0" col="0" text="SSID:" />
+              <TextField row="0" col="1" hint="{{ hintSsid }}" text="{{ ssid }}" />
+              <Label row="1" col="0" text="Password:" />
+              <TextField row="1" col="1" secure="true" hint="{{ hintPassword }}" text="{{ password }}" />
+            </GridLayout>
+            <Button text="Test nativescript-easylink" tap="{{ testIt }}" class="-primary"/>
+          </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>
