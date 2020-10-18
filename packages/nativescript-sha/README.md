@@ -54,17 +54,21 @@ console.log(`Hmac is ${sha.HmacSha256("secretkey", "this is our test data")}`);
 ```
 
 ## API
-public Sha1(input: string): string;
-public Sha224(input: string): string;
-public Sha256(input: string): string;
-public Sha384(input: string): string;
-public Sha512(input: string): string;
 
-public HmacSha1(key: string, input: string): string;
-public HmacSha224(key: string, input: string): string;
-public HmacSha256(key: string, input: string): string;
-public HmacSha384(key: string, input: string): string;
-public HmacSha512(key: string, input: string): string;
+### Methods
+
+| Method                                                 | Description                                                          |
+|--------------------------------------------------------| ---------------------------------------------------------------------|
+| public Sha1(input: string): string;                    | Calculate SHA1 of supplied input data                                |
+| public Sha224(input: string): string;                  | Calculate SHA224 of supplied input data                              |
+| public Sha256(input: string): string;                  | Calculate SHA256 of supplied input data                              |
+| public Sha384(input: string): string;                  | Calculate SHA384 of supplied input data                              |
+| public Sha512(input: string): string;                  | Calculate SHA512 of supplied input data                              |
+| public HmacSha1(key: string, input: string): string;   | Calculate HMAC using SHA1 of supplied input data with supplied key   |
+| public HmacSha224(key: string, input: string): string; | Calculate HMAC using SHA224 of supplied input data with supplied key |
+| public HmacSha256(key: string, input: string): string; | Calculate HMAC using SHA256 of supplied input data with supplied key |
+| public HmacSha384(key: string, input: string): string; | Calculate HMAC using SHA384 of supplied input data with supplied key |
+| public HmacSha512(key: string, input: string): string; | Calculate HMAC using SHA512 of supplied input data with supplied key |
 
 ## Donation
 If this project helped you reduce your development time, you could consider helping me with a cup of coffee or some electricity :)
