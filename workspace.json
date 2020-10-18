@@ -81,7 +81,7 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx run nativescript-sha:build.all", "nx run nativescript-easylink:build.all"],
+						"commands": ["nx run nativescript-sha:build.all", "nx run nativescript-easylink:build.all", "nx run nativescript-outline-label:build.all"],
 						"parallel": false
 					}
 				},
@@ -176,6 +176,49 @@
 					"outputs": ["dist/packages"],
 					"options": {
 						"commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-easylink"],
+						"parallel": false
+					}
+				}
+			}
+		},
+		"nativescript-outline-label": {
+			"root": "packages/nativescript-outline-label",
+			"sourceRoot": "packages/nativescript-outline-label",
+			"projectType": "library",
+			"schematics": {},
+			"architect": {
+				"build": {
+					"builder": "@nrwl/node:package",
+					"options": {
+						"outputPath": "dist/packages/nativescript-outline-label",
+						"tsConfig": "packages/nativescript-outline-label/tsconfig.json",
+						"packageJson": "packages/nativescript-outline-label/package.json",
+						"main": "packages/nativescript-outline-label/index.ts",
+						"assets": [
+							"packages/nativescript-outline-label/*.md",
+							"packages/nativescript-outline-label/index.d.ts",
+							"LICENSE",
+							{
+								"glob": "**/*",
+								"input": "packages/nativescript-outline-label/platforms/",
+								"output": "./platforms/"
+							}
+						]
+					}
+				},
+				"build.all": {
+					"builder": "@nrwl/workspace:run-commands",
+					"outputs": ["dist/packages"],
+					"options": {
+						"commands": ["nx run nativescript-outline-label:build", "node tools/scripts/build-finish.ts nativescript-outline-label"],
+						"parallel": false
+					}
+				},
+				"focus": {
+					"builder": "@nrwl/workspace:run-commands",
+					"outputs": ["dist/packages"],
+					"options": {
+						"commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-outline-label"],
 						"parallel": false
 					}
 				}

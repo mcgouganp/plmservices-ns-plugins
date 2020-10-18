@@ -1,7 +1,7 @@
 export declare class EasylinkImpl {
 	constructor();
 	public destroy(): void;
-	public start(ssid: string, password: string): boolean;
+	public start(ssid: string, password: string, type: number): boolean;
 	public stop(): void;
 	public ssid(): string;
 }

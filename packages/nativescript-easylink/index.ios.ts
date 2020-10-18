@@ -24,10 +24,7 @@ export class EasylinkImpl {
 	constructor() {
 		this._delegate = new EasylinkDelegate();
 		this._delegate.owner = new WeakRef(this);
-		//this._easylink = EASYLINK.alloc().initForDebugWithDelegate(true, this._delegate);
 		this._easylink = EASYLINK.alloc().initForDebugWithDelegate(true, this._delegate);
-		console.log(`constructor: debug ${this._easylink.enableDebug}, mode ${this._easylink.mode}`);
-		console.dir(this._easylink);
 	}
 
 	public destroy(): void {
@@ -35,20 +32,16 @@ export class EasylinkImpl {
 		this._easylink = null;
 	}
 
-	public start(ssid: string, password: string): boolean {
+	public start(ssid: string, password: string, type: number): boolean {
 		console.log(`Starting Easylink with [${ssid}], [${password}]`);
 		const ssid0: NSString = NSString.stringWithString(ssid);
 		const ssid1: NSData = ssid0.dataUsingEncoding(NSUTF8StringEncoding);
-		const wlanConfig = NSMutableDictionary.alloc().initWithCapacity(5);
+		const wlanConfig = NSMutableDictionary.alloc().initWithCapacity(3);
 		wlanConfig.setObjectForKey(ssid1, "SSID");
 		wlanConfig.setObjectForKey(password, "PASSWORD");
 		wlanConfig.setObjectForKey(true, "DHCP");
-		console.log(`constructor: debug ${this._easylink.enableDebug}, mode ${this._easylink.mode}`);
-		console.dir(this._easylink);
-		this._easylink.prepareEasyLinkInfoMode(wlanConfig, null, EasyLinkMode.ASYLINK_AWS);
-		console.log(`prepare done`);
+		this._easylink.prepareEasyLinkInfoMode(wlanConfig, null, type);
 		this._easylink.transmitSettings();
-		console.log(`transmit done`);
 		return true;
 	}
 

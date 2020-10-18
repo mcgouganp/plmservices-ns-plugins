@@ -8,6 +8,11 @@ export function navigatingTo(args: EventData) {
 	page.bindingContext = new DemoModel();
 }
 
+export function navigatingFrom(args: EventData) {
+	const page = <Page>args.object;
+	page.bindingContext.destroy();
+}
+
 export class DemoModel extends DemoSharedNativescriptEasylink {
 	constructor() {
 		super();
@@ -20,7 +25,7 @@ export class DemoModel extends DemoSharedNativescriptEasylink {
 							console.log('Location services enabled');
 							const ssid0 = Easylink.ssid();
 							console.log(`SSID found is [${ssid0}]`);
-							self.setSsid(ssid0);
+							self.ssid = ssid0;
 						},
 						(e) => {
 							console.log('Error: ' + (e.message || e));
@@ -33,7 +38,7 @@ export class DemoModel extends DemoSharedNativescriptEasylink {
 					console.log('Location services already enabled');
 					const ssid0 = Easylink.ssid();
 					console.log(`SSID found is [${ssid0}]`);
-					self.setSsid(ssid0);
+					self.ssid = ssid0;
 				}
 			},
 			function(e) {

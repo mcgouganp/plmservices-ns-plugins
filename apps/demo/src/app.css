@@ -1,2 +1,26 @@
 @import '~@nativescript/theme/css/core.css';
 @import '~@nativescript/theme/css/default.css';
+
+.ns-tablet {
+	font-size: 48;
+}
+
+.ns-phone {
+	font-size: 24;
+}
+
+OutlineLabel {
+	color: yellow;
+	outline: 4 black;
+	font-weight: bold;
+	padding: 20;
+	text-align: center;
+}
+
+#outline {
+	outline: 4 purple;
+}
+
+.outline {
+	outline: 4 blue;
+}

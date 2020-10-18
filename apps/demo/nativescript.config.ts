@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-	id: 'au.com.plmservices.easylinkdemo',
+	id: 'au.com.plmservices.nsplugins',
 	appResourcesPath: '../../tools/assets/App_Resources',
 	android: {
 		v8Flags: '--expose_gc',

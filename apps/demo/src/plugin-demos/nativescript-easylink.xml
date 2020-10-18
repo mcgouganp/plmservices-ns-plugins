@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" navigatingFrom="navigatingFrom" class="page">
     <Page.actionBar>
         <ActionBar title="nativescript-easylink" icon="" class="action-bar">
         </ActionBar>
@@ -6,13 +6,15 @@
     <StackLayout class="p-20">
         <ScrollView class="h-full">
           <StackLayout>
-            <GridLayout rows="auto, auto" columns="auto, *">
-              <Label row="0" col="0" text="SSID:" />
+            <GridLayout rows="auto, auto, auto" columns="auto, *">
+              <Label row="0" col="0" text="SSID" />
               <TextField row="0" col="1" hint="{{ hintSsid }}" text="{{ ssid }}" />
-              <Label row="1" col="0" text="Password:" />
+              <Label row="1" col="0" text="Password" />
               <TextField row="1" col="1" secure="true" hint="{{ hintPassword }}" text="{{ password }}" />
+              <Label row="2" col="0" text="Type" />
+              <ListPicker row="2" col="1" items="{{ types }}" textField="name" valueField="value" selectedIndex="{{ type }}" class="picker" />
             </GridLayout>
-            <Button text="Test nativescript-easylink" tap="{{ testIt }}" class="-primary"/>
+            <Button text="{{ transmitting, (transmitting ? 'Stop' : 'Start') + ' Easylink discovery' }}" tap="{{ action }}" class="-primary -rounded-lg m-t-10"/>
           </StackLayout>
         </ScrollView>
     </StackLayout>

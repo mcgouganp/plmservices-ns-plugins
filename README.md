@@ -6,6 +6,7 @@ npm start
 ```
 
 - @plmservices/nativescript-easylink
+- @plmservices/nativescript-outline-label
 - @plmservices/nativescript-sha
 
 # How to use?

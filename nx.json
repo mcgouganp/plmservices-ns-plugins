@@ -28,6 +28,9 @@
 		},
 		"nativescript-easylink": {
 			"tags": []
+		},
+		"nativescript-outline-label": {
+			"tags": []
 		}
 	},
 	"workspaceLayout": {

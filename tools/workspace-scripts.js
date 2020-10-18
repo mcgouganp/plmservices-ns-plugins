@@ -81,6 +81,13 @@ module.exports = {
 					description: '@plmservices/nativescript-easylink: Build',
 				},
 			},
+			// @plmservices/nativescript-outline-label
+			'nativescript-outline-label': {
+				build: {
+					script: 'nx run nativescript-outline-label:build.all',
+					description: '@plmservices/nativescript-outline-label: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -98,6 +105,10 @@ module.exports = {
 			'nativescript-easylink': {
 				script: 'nx run nativescript-easylink:focus',
 				description: 'Focus on @plmservices/nativescript-easylink',
+			},
+			'nativescript-outline-label': {
+				script: 'nx run nativescript-outline-label:focus',
+				description: 'Focus on @plmservices/nativescript-outline-label',
 			},
 			reset: {
 				script: 'nx run all:focus',
