@@ -1,4 +1,4 @@
-# Nativescript nativescript-easylink ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png)
+# NativeScript Easylink ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png)
 
 [![npm](https://img.shields.io/npm/v/@plmservices/nativescript-easylink.svg)](https://www.npmjs.com/package/@plmservices/nativescript-easylink)
 [![npm](https://img.shields.io/npm/dm/@plmservices/nativescript-easylink.svg)](https://www.npmjs.com/package/@plmservices/nativescript-easylink)

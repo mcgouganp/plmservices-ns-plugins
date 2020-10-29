@@ -1,4 +1,4 @@
-# Nativescript nativescript-sha ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png)
+# NativeScript SHA/HMAC ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png)
 
 [![npm](https://img.shields.io/npm/v/@plmservices/nativescript-sha.svg)](https://www.npmjs.com/package/@plmservices/nativescript-sha)
 [![npm](https://img.shields.io/npm/dm/@plmservices/nativescript-sha.svg)](https://www.npmjs.com/package/@plmservices/nativescript-sha)
