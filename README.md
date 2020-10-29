@@ -1,5 +1,7 @@
 # @plmservices/\* plugins
 
+Nativescript plugins produced by PLM Services.
+
 ```
 npm run setup
 npm start
@@ -60,3 +62,8 @@ npm run publish-packages
 - You will then be given a brief sanity check 🧠😊
 
 <h3 align="center">Made with ❤️</h3>
+
+## Donation
+If any of these plugins helped you reduce your development time, you could consider helping me with a cup of coffee or some electricity :)
+
+[![Donate](https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D28NSTFXMQKQ)

@@ -1,38 +1,41 @@
-@NativeClass
+import { setTimeout, clearTimeout } from "@nativescript/core/timer"
+
+let easylinkController: EASYLINK;
+let easylinkDelegate: EasylinkDelegate;
+let timeout: number;
+
+@NativeClass()
 class EasylinkDelegate extends NSObject implements EasyLinkFTCDelegate {
-	static ObjCProtocols = [ EasyLinkFTCDelegate ];
+	public static ObjCProtocols = [EasyLinkFTCDelegate];
 
-	owner: WeakRef<EasylinkImpl>;
+	private _resolve: (result: boolean) => void;
+	private _reject: (error: Error) => void;
 
-	onFoundWithNameMataData(client: number, name: string, mataDataDict: NSDictionary<any, any>): void {
+	public static createDelegate(resolve: (result: boolean) => void, reject: (error: Error) => void): EasylinkDelegate {
+		const delegate = <EasylinkDelegate>EasylinkDelegate.new();
+		delegate._resolve = resolve;
+		delegate._reject = reject;
+		return delegate;
+	}
+
+	public onFoundWithNameMataData(client: number, name: string, mataDataDict: NSDictionary<any, any>): void {
 		console.log(`onFound ${client}, ${name}, ${mataDataDict}`);
+		stopDiscovery();
+		this._resolve(true);
 	}
 
-	onDisconnectFromFTCWithError(client: number, err: boolean): void {
-		console.log(`onDisconnect ${client}, ${err}`);
-	}
-
-	onFoundByFTCWithConfiguration(client: number, configDict: NSDictionary<any, any>): void {
+	public onFoundByFTCWithConfiguration(client: number, configDict: NSDictionary<any, any>): void {
 		console.log(`onFoundByFTC ${client}, ${configDict}`);
+	}
+
+	public onDisconnectFromFTCWithError(client: number, err: boolean): void {
+		console.log(`onDisconnect ${client}, ${err}`);
 	}
 }
 
-export class EasylinkImpl {
-	private _easylink: EASYLINK;
-	private _delegate: EasylinkDelegate;
+export function startDiscovery(ssid: string, password: string, type: number): Promise<boolean> {
 
-	constructor() {
-		this._delegate = new EasylinkDelegate();
-		this._delegate.owner = new WeakRef(this);
-		this._easylink = EASYLINK.alloc().initForDebugWithDelegate(true, this._delegate);
-	}
-
-	public destroy(): void {
-		this._easylink.unInit();
-		this._easylink = null;
-	}
-
-	public start(ssid: string, password: string, type: number): boolean {
+	return new Promise((resolve, reject) => {
 		console.log(`Starting Easylink with [${ssid}], [${password}]`);
 		const ssid0: NSString = NSString.stringWithString(ssid);
 		const ssid1: NSData = ssid0.dataUsingEncoding(NSUTF8StringEncoding);
@@ -40,20 +43,25 @@ export class EasylinkImpl {
 		wlanConfig.setObjectForKey(ssid1, "SSID");
 		wlanConfig.setObjectForKey(password, "PASSWORD");
 		wlanConfig.setObjectForKey(true, "DHCP");
-		this._easylink.prepareEasyLinkInfoMode(wlanConfig, null, type);
-		this._easylink.transmitSettings();
-		return true;
-	}
 
-	public stop(): void {
-		this._easylink.stopTransmitting();
-	}
-
-	public ssid(): string {
-		return EASYLINK.ssidForConnectedNetwork();
-	}
+		easylinkDelegate = EasylinkDelegate.createDelegate(resolve, reject);
+		easylinkController = EASYLINK.alloc().initForDebugWithDelegate(true, easylinkDelegate);
+		easylinkController.prepareEasyLinkInfoMode(wlanConfig, null, type);
+		easylinkController.transmitSettings();
+		timeout = setTimeout(() => {
+			console.log('startDiscovery timeout');
+			stopDiscovery();
+			resolve(false);
+		}, 20000);
+	});
 }
 
-const instance = new EasylinkImpl();
-export const Easylink = instance;
+export function stopDiscovery(): void {
+	console.log('Stopping easylink discovery');
+	clearTimeout(timeout);
+	easylinkController.stopTransmitting();
+}
 
+export function ssid(): string {
+	return EASYLINK.ssidForConnectedNetwork();
+}

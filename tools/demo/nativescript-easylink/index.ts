@@ -1,6 +1,7 @@
 import { DemoSharedBase } from '../utils';
-import { Easylink } from '@plmservices/nativescript-easylink';
+import * as Easylink from '@plmservices/nativescript-easylink';
 import { Observable, PropertyChangeData } from '@nativescript/core';
+import { alert, AlertOptions } from '@nativescript/core';
 
 export class DemoSharedNativescriptEasylink extends DemoSharedBase {
 	private _transmitting: boolean;
@@ -74,13 +75,39 @@ export class DemoSharedNativescriptEasylink extends DemoSharedBase {
 	public action(): void {
 		if(this._transmitting) {
 			console.log('Stopping nativescript-easylink!');
-			Easylink.stop();
+			Easylink.stopDiscovery();
+			this._transmitting = false;
+			this.notifyPropertyChange("transmitting", this._transmitting);
 		} else {
 			console.log('Starting nativescript-easylink!');
-			Easylink.start(this.get("ssid"), this.get("password"), this.get("type"));
+			this._transmitting = true;
+			this.notifyPropertyChange("transmitting", this._transmitting);
+			const self = this;
+			Easylink.startDiscovery(this.get("ssid"), this.get("password"), this.get("type"))
+				.then((result) => {
+					console.log(`Discovery ${result ? "success" : "timeout"}`);
+					self._transmitting = false;
+					self.notifyPropertyChange("transmitting", self._transmitting);
+					const options: AlertOptions = {
+						title: "Easylink Discovery",
+						message: result ? "Success" : "Timeout",
+						okButtonText: "OK",
+						cancelable: false
+					};
+					alert(options);
+				}).catch((e) => {
+					console.log('Discovery failure: ' + (e.message || e));
+					self._transmitting = false;
+					self.notifyPropertyChange("transmitting", self._transmitting);
+					const options: AlertOptions = {
+						title: "Easylink Discovery",
+						message: "Failure: " + (e.message || e),
+						okButtonText: "OK",
+						cancelable: false
+					};
+					alert(options);
+				});
 		}
-		this._transmitting = !this._transmitting;
-		this.notifyPropertyChange("transmitting", this._transmitting);
 	}
 
 	public destroy(): void {

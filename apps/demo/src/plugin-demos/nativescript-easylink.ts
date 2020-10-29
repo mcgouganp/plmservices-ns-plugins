@@ -1,7 +1,7 @@
 import { Observable, EventData, Page } from '@nativescript/core';
 import { DemoSharedNativescriptEasylink } from '@demo/shared';
 import * as geolocation from '@nativescript/geolocation';
-import { Easylink } from '@plmservices/nativescript-easylink';
+import * as Easylink from '@plmservices/nativescript-easylink';
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;
