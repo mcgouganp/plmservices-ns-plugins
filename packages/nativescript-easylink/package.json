@@ -1,6 +1,6 @@
 {
   "name": "@plmservices/nativescript-easylink",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nativescript plugin that implements MxChip's Easylink device setup protocol.",
   "main": "index",
   "typings": "index.d.ts",
