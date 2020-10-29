@@ -1,8 +1,8 @@
 # Nativescript nativescript-easylink ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png)
 
-[![npm](https://img.shields.io/npm/v/nativescript-sha.svg)](https://www.npmjs.com/package/nativescript-easylink)
-[![npm](https://img.shields.io/npm/dm/nativescript-sha.svg)](https://www.npmjs.com/package/nativescript-easylink)
-[![Build Status](https://travis-ci.org/mcgouganp/nativescript-sha.svg?branch=master)](https://travis-ci.org/mcgouganp/nativescript-easylink)
+[![npm](https://img.shields.io/npm/v/@plmservices/nativescript-easylink.svg)](https://www.npmjs.com/package/@plmservices/nativescript-easylink)
+[![npm](https://img.shields.io/npm/dm/@plmservices/nativescript-easylink.svg)](https://www.npmjs.com/package/@plmservices/nativescript-easylink)
+[![Build Status](https://travis-ci.org/mcgouganp/plmservices-ns-plugins.svg?branch=master)](https://travis-ci.org/mcgouganp/plmservices-ns-plugins)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D28NSTFXMQKQ)
 
 This plugin implements MxChip's Easylink device discovery/configuration protocol.
