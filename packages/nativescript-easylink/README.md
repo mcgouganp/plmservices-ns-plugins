@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@plmservices/nativescript-easylink.svg)](https://www.npmjs.com/package/@plmservices/nativescript-easylink)
 [![npm](https://img.shields.io/npm/dm/@plmservices/nativescript-easylink.svg)](https://www.npmjs.com/package/@plmservices/nativescript-easylink)
-[![Build Status](https://travis-ci.org/mcgouganp/plmservices-ns-plugins.svg?branch=master)](https://travis-ci.org/mcgouganp/plmservices-ns-plugins)
+[![Build Status](https://travis-ci.com/github/mcgouganp/plmservices-ns-plugins.svg?branch=master)](https://travis-ci.com/github/mcgouganp/plmservices-ns-plugins)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D28NSTFXMQKQ)
 
 This plugin implements MxChip's Easylink device discovery/configuration protocol.

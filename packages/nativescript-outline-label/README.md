@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@plmservices/nativescript-outline-label.svg)](https://www.npmjs.com/package/@plmservices/nativescript-outline-label)
 [![npm](https://img.shields.io/npm/dm/@plmservices/nativescript-outline-label.svg)](https://www.npmjs.com/package/@plmservices/nativescript-outline-label)
-[![Build Status](https://travis-ci.org/mcgouganp/plmservices-ns-plugins.svg?branch=master)](https://travis-ci.org/mcgouganp/plmservices-ns-plugins)
+[![Build Status](https://travis-ci.com/github/mcgouganp/plmservices-ns-plugins.svg?branch=master)](https://travis-ci.com/github/mcgouganp/plmservices-ns-plugins)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D28NSTFXMQKQ)
 
 This plugin extends the Nativescript Label component to support outlined text.
