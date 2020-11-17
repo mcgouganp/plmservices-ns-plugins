@@ -1,6 +1,6 @@
 {
   "name": "@plmservices/nativescript-outline-label",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A Nativescript Label component that supports configurable text outlining.",
   "main": "index",
   "typings": "index.d.ts",

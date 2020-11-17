@@ -1,6 +1,6 @@
 {
   "name": "@plmservices/nativescript-sha",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Nativescript SHA (HMAC-SHA) plugin.",
   "main": "index",
   "typings": "index.d.ts",
