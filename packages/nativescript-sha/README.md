@@ -70,6 +70,10 @@ console.log(`Hmac is ${sha.HmacSha256("secretkey", "this is our test data")}`);
 | public HmacSha384(key: string, input: string): string; | Calculate HMAC using SHA384 of supplied input data with supplied key |
 | public HmacSha512(key: string, input: string): string; | Calculate HMAC using SHA512 of supplied input data with supplied key |
 
+## TODO
+* Angular demo app
+* Vue demo app
+
 ## Donation
 If this project helped you reduce your development time, you could consider helping me with a cup of coffee or some electricity :)
 

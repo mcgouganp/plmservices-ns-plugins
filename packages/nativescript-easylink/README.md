@@ -10,6 +10,24 @@ This plugin implements MxChip's Easylink device discovery/configuration protocol
 NOTE: I am not affiliated with MxChip and this project is not endorsed by them.
 The native code that this plugin uses is publicly supplied by MxChip and all rights and credit for the native code belongs to MxChip.
 
+## Prerequisites / Requirements
+
+To use this under iOS you must:
+* Request the access to the multicast special entitlement directly from Apple
+* Create a provisioning profile containing that entitlement
+* Create an `app.entitlements` file containing:
+```
+	<key>com.apple.developer.networking.wifi-info</key>
+	<true/>
+	<key>com.apple.developer.networking.multicast</key>
+    <true/>
+```
+
+Some helpful information on this can be found at:
+https://developer.apple.com/forums/thread/663271
+
+## Installation
+
 ```javascript
 ns plugin add @plmservices/nativescript-easylink
 ```
@@ -25,7 +43,6 @@ const type: number = 4;	// AWS style
 Easylink.startDiscovery(ssid, password, style);
 Easylink.stopDiscovery();
 Easylink.destroy();
-
 ```
 
 ## API
@@ -38,6 +55,10 @@ Easylink.destroy();
 | public startDiscovery(ssid: string, password: string, type: number): Promise<boolean>; | Start device discovery                                |
 | public stopDiscovery(): void;                                                          | Stops device discovery                                |
 | public ssid(): string;                                                                 | Returns the SSID of the locally attached WiFi network |
+
+## TODO
+* Angular demo app
+* Vue demo app
 
 ## Donation
 If this project helped you reduce your development time, you could consider helping me with a cup of coffee or some electricity :)
