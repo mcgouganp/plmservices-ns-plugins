@@ -12,9 +12,9 @@
 		"@plmservices/nativescript-outline-label": "file:../../packages/nativescript-outline-label"
 	},
 	"devDependencies": {
-		"@nativescript/android": "~7.0.0",
-		"@nativescript/ios": "7.0.1",
-		"@nativescript/webpack": "^3.0.0",
+		"@nativescript/android": "7.0.1",
+		"@nativescript/ios": "7.0.5",
+		"@nativescript/webpack": "~3.0.8",
 		"typescript": "file:../../node_modules/typescript"
 	}
 }
