@@ -1,0 +1,7 @@
+android {
+
+}
+
+dependencies {
+	implementation 'io.fogcloud.sdk:easylinkv3:0.2.7'
+}
