@@ -34,7 +34,6 @@ class EasylinkDelegate extends NSObject implements EasyLinkFTCDelegate {
 }
 
 export function startDiscovery(ssid: string, password: string, type: number): Promise<boolean> {
-
 	return new Promise((resolve, reject) => {
 		console.log(`Starting Easylink with [${ssid}], [${password}]`);
 		const ssid0: NSString = NSString.stringWithString(ssid);
