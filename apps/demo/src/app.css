@@ -1,20 +1,21 @@
 @import '~@nativescript/theme/css/core.css';
 @import '~@nativescript/theme/css/default.css';
 
-.ns-tablet {
-	font-size: 48;
-}
-
-.ns-phone {
-	font-size: 24;
-}
-
 OutlineLabel {
+	font-family: "Arial";
 	color: yellow;
 	outline: 4 black;
 	font-weight: bold;
 	padding: 20;
 	text-align: center;
+}
+
+.ns-tablet OutlineLabel {
+	font-size: 48;
+}
+
+.ns-phone OutlineLabel {
+	font-size: 24;
 }
 
 #outline {

@@ -14,7 +14,7 @@
               <Label row="2" col="0" text="Type" />
               <ListPicker row="2" col="1" items="{{ types }}" textField="name" valueField="value" selectedIndex="{{ type }}" class="picker" />
             </GridLayout>
-            <Button text="{{ transmitting, (transmitting ? 'Stop' : 'Start') + ' Easylink discovery' }}" tap="{{ action }}" class="-primary -rounded-lg m-t-10"/>
+            <Button horizontalAlignment="center" height="auto" text="{{ transmitting, (transmitting ? 'Stop' : 'Start') + ' Easylink discovery' }}" tap="{{ action }}" class="-primary -rounded-lg m-t-10"/>
           </StackLayout>
         </ScrollView>
     </StackLayout>
